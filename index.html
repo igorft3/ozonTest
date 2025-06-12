@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Bar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="progressBar" class="progressBar">
+      <svg
+        viewBox="0 0 100 100"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+        data-value="10"
+      >
+        <circle r="45" cx="50" cy="50" />
+        <path
+          class="meter"
+          d="M5,50a45,45 0 1,0 90,0a45,45 0 1,0 -90,0"
+          stroke-dashoffset="282.78302001953125"
+          stroke-dasharray="282.78302001953125"
+        />
+      </svg>
+    </div>
+    <div class="controlInterfase">
+      <input
+        type="number"
+        name="progressInput"
+        id="progressInput"
+        size="3"
+        value="10"
+        max="100"
+        min="0"
+        class="progressInput"
+      />
+      <p class="nameInput">Value</p>
+      <label class="switch">
+        <input
+          type="checkbox"
+          name="switchAnimate"
+          class="switchAnimate"
+          id="switchAnimate"
+        />
+        <span class="slide-round"></span>
+      </label>
+      <p class="nameInput">Animate</p>
+      <label class="switch">
+        <input
+          type="checkbox"
+          name="switchVisible"
+          class="switchVisible"
+          id="switchVisible"
+        />
+        <span class="slide-round"></span>
+      </label>
+      <p class="nameInput">Hide</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
