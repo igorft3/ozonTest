@@ -4,15 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Progress Bar</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div id="progressBar" class="progressBar">
+    <div id="progress" class="progress">
       <svg
         viewBox="0 0 100 100"
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="none"
         data-value="10"
+        id="svgProgress"
       >
         <circle r="45" cx="50" cy="50" />
         <path
@@ -23,39 +24,42 @@
         />
       </svg>
     </div>
+
     <div class="controlInterfase">
       <input
+        id="progressInput"
+        class="inputValue"
         type="number"
         name="progressInput"
-        id="progressInput"
         size="3"
         value="10"
-        max="100"
         min="0"
-        class="progressInput"
+        max="100"
       />
       <p class="nameInput">Value</p>
       <label class="switch">
         <input
-          type="checkbox"
-          name="switchAnimate"
-          class="switchAnimate"
           id="switchAnimate"
+          class="switch__input"
+          type="checkbox"
+          aria-label="Анимация прогресс-бара"
+          name="switchAnimate"
         />
-        <span class="slide-round"></span>
+        <span class="slider round"></span>
       </label>
       <p class="nameInput">Animate</p>
       <label class="switch">
         <input
-          type="checkbox"
-          name="switchVisible"
-          class="switchVisible"
           id="switchVisible"
+          class="switch__input"
+          type="checkbox"
+          aria-label="Скрытие прогресс-бара"
+          name="switchVisible"
         />
-        <span class="slide-round"></span>
+        <span class="slider round"></span>
       </label>
       <p class="nameInput">Hide</p>
     </div>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
