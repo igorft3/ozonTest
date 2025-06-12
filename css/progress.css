@@ -1,0 +1,39 @@
+/* progress */
+.progress {
+  width: 100%;
+  max-width: var(--max-width-progress);
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.progress.hidden {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+  /* тут можно его убрать, а можно и не убирать */
+}
+
+.svgProgress {
+  width: 100%;
+  max-width: clamp(20vw, 25vw, 30vw);
+  height: auto;
+  aspect-ratio: 1 / 1;
+}
+
+.svgProgress circle {
+  stroke: var(--inactive-color);
+  stroke-width: clamp(5px, 1vw, 6px);
+  stroke-dasharray: 0;
+  fill: none;
+}
+
+.meter {
+  stroke: var(--primary-color);
+  stroke-width: clamp(5px, 1vw, 6px);
+  fill: none;
+  transition: stroke-dashoffset 1s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+  transform: rotate(-90deg) scaleX(-1);
+  transform-origin: center;
+}

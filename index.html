@@ -7,58 +7,61 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div id="progress" class="progress">
-      <svg
-        viewBox="0 0 100 100"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none"
-        data-value="10"
-        id="svgProgress"
-      >
-        <circle r="45" cx="50" cy="50" />
-        <path
-          class="meter"
-          d="M5,50a45,45 0 1,0 90,0a45,45 0 1,0 -90,0"
-          stroke-dashoffset="282.78302001953125"
-          stroke-dasharray="282.78302001953125"
-        />
-      </svg>
-    </div>
+    <div class="container">
+      <div id="progress" class="progress">
+        <svg
+          viewBox="0 0 100 100"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          data-value="10"
+          id="svgProgress"
+          class="svgProgress"
+        >
+          <circle r="45" cx="50" cy="50" />
+          <path
+            class="meter"
+            d="M5,50a45,45 0 1,0 90,0a45,45 0 1,0 -90,0"
+            stroke-dashoffset="282.78302001953125"
+            stroke-dasharray="282.78302001953125"
+          />
+        </svg>
+      </div>
 
-    <div class="controlInterfase">
-      <input
-        id="progressInput"
-        class="inputValue"
-        type="number"
-        name="progressInput"
-        size="3"
-        value="10"
-        min="0"
-        max="100"
-      />
-      <p class="nameInput">Value</p>
-      <label class="switch">
+      <div class="controlInterfase">
         <input
-          id="switchAnimate"
-          class="switch__input"
-          type="checkbox"
-          aria-label="Анимация прогресс-бара"
-          name="switchAnimate"
+          id="progressInput"
+          class="inputValue"
+          type="number"
+          name="progressInput"
+          size="3"
+          value="10"
+          min="0"
+          max="100"
         />
-        <span class="slider round"></span>
-      </label>
-      <p class="nameInput">Animate</p>
-      <label class="switch">
-        <input
-          id="switchVisible"
-          class="switch__input"
-          type="checkbox"
-          aria-label="Скрытие прогресс-бара"
-          name="switchVisible"
-        />
-        <span class="slider round"></span>
-      </label>
-      <p class="nameInput">Hide</p>
+        <p class="nameInput">Value</p>
+        <label class="switch">
+          <input
+            id="switchAnimate"
+            class="switch__input"
+            type="checkbox"
+            aria-label="Анимация прогресс-бара"
+            name="switchAnimate"
+          />
+          <span class="slider round"></span>
+        </label>
+        <p class="nameInput">Animate</p>
+        <label class="switch">
+          <input
+            id="switchVisible"
+            class="switch__input"
+            type="checkbox"
+            aria-label="Скрытие прогресс-бара"
+            name="switchVisible"
+          />
+          <span class="slider round"></span>
+        </label>
+        <p class="nameInput">Hide</p>
+      </div>
     </div>
     <script src="js/script.js"></script>
   </body>

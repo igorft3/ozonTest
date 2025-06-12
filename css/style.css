@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/gt-eesti-display-trial');
+
+@import url('input.css');
+@import url('progress.css');
+
+:root {
+  --primary-color: #005dff;
+  --inactive-color: #eef3f6;
+  --spacing-unit: 1rem;
+  --border-radius: clamp(1rem, 2vw, 2rem);
+  --font-size-base: clamp(16px, 2.5vw, 18px);
+  --line-height-base: 1.4;
+  --max-width-progress: clamp(40vw, 50vw, 60vw);
+  --max-width-control: clamp(25vw, 30vw, 35vw);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100vh;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--spacing-unit) * 3);
+  min-height: 100vh;
+  font-family: 'GT Eesti Display Trial', 'Roboto', sans-serif;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+}
+
+/* animate */
+
+@keyframes spin {
+  from {
+    transform: rotate((0deg));
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.rotate {
+  animation: spin 2s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+}
+
+@media (orientation: landscape) {
+  body {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .controlInterfase {
+    max-width: clamp(25vw, 30vw, 35vw);
+  }
+
+  .svgProgress {
+    max-width: clamp(15vw, 20vw, 25vw);
+  }
+}
+
+@media (max-width: 768px) {
+  .controlInterfase {
+    justify-items: center;
+  }
+
+  .progress {
+    max-width: 80vh;
+  }
+
+  .nameInput {
+    text-align: center;
+  }
+}
