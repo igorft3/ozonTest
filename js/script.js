@@ -55,7 +55,19 @@ class CircularProgress {
   initEventListeners() {
     const input = document.getElementById('inputValue');
     input.addEventListener('input', e => {
-      this.setValue(e.target.value);
+      let clean = e.target.value.replace(/[^\d]/g, '');
+
+      if (clean.length > 3) {
+        clean = clean.slice(0, 3);
+      }
+
+      let numValue = Number(clean);
+      if (numValue > 100) {
+        numValue = 100;
+      }
+
+      e.target.value = numValue;
+      this.setValue(numValue);
     });
 
     const animateSwitch = document.getElementById('switchAnimate');
